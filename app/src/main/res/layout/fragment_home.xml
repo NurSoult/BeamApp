@@ -71,5 +71,27 @@
             android:scaleType="centerCrop" />
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:id="@+id/tv_pop_films"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/myfont"
+        android:text="Popular films"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tv_would_like_to_watch"
+        app:layout_constraintTop_toBottomOf="@id/random_film" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_view_films_popular"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_pop_films" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
