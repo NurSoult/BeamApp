@@ -16,8 +16,8 @@
         android:label="fragment_favorites"
         tools:layout="@layout/fragment_favorites" />
     <fragment
-        android:id="@+id/genresFragment"
-        android:name="com.example.beam.GenresFragment"
-        android:label="fragment_genres"
-        tools:layout="@layout/fragment_genres" />
+        android:id="@+id/catalogFragment"
+        android:name="com.example.beam.CatalogFragment"
+        android:label="fragment_catalog"
+        tools:layout="@layout/fragment_catalog" />
 </navigation>
