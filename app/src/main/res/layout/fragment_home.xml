@@ -41,9 +41,18 @@
         android:layout_width="32dp"
         android:layout_height="match_parent"
         android:layout_gravity="bottom|center"
-        android:layout_marginStart="230dp"
+        android:layout_marginStart="205dp"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_search"/>
+
+    <ImageView
+        android:id="@+id/img_profile"
+        android:layout_width="32dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom|center"
+        android:layout_marginStart="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_profile"/>
 </LinearLayout>
     
     <TextView
