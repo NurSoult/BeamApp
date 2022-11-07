@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment">
 
     <androidx.core.widget.NestedScrollView
@@ -15,134 +15,129 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-<LinearLayout
-    android:id="@+id/linear_header"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="30dp"
-    android:layout_marginTop="10dp"
-    android:layout_marginEnd="20dp"
-    android:orientation="horizontal"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                android:id="@+id/linear_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/tv_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/myfont"
-        android:text="Home"
-        android:textColor="@color/accent"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_home"
+                    android:layout_weight="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/myfont"
+                    android:text="Home"
+                    android:textColor="@color/g_black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/img_search"
-        android:layout_width="32dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom|center"
-        android:layout_marginStart="205dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_search"/>
+                <ImageView
+                    android:id="@+id/img_search"
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginStart="205dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_search" />
 
-    <ImageView
-        android:id="@+id/img_profile"
-        android:layout_width="32dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom|center"
-        android:layout_marginStart="10dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_profile"/>
-</LinearLayout>
-    
-    <TextView
-        android:id="@+id/tv_would_like_to_watch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/myfont"
-        android:text="What would you like to watch?"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/linear_header"
-        app:layout_constraintTop_toBottomOf="@id/linear_header" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/random_film"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="25dp"
-        android:elevation="2dp"
-        app:cardCornerRadius="10dp"
-        app:cardUseCompatPadding="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_would_like_to_watch">
+            </LinearLayout>
 
-        <ImageView
-            android:id="@+id/img_random_film"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop" />
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/tv_would_like_to_watch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/myfont"
+                android:text="What would you like to watch?"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/linear_header"
+                app:layout_constraintTop_toBottomOf="@id/linear_header" />
 
-    <TextView
-        android:id="@+id/tv_pop_films"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:fontFamily="@font/myfont"
-        android:text="Popular films"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/tv_would_like_to_watch"
-        app:layout_constraintTop_toBottomOf="@id/random_film" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/random_film"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:elevation="2dp"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:cardBackgroundColor="@color/g_black"
+                app:layout_constraintTop_toBottomOf="@id/tv_would_like_to_watch">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rec_view_films_popular"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_pop_films" />
+                <ImageView
+                    android:id="@+id/img_random_film"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/tv_catalog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/myfont"
-        android:text="Catalog"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/rec_view_films_popular"
-        app:layout_constraintTop_toBottomOf="@id/rec_view_films_popular" />
+            <TextView
+                android:id="@+id/tv_pop_films"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/myfont"
+                android:text="Popular films"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tv_would_like_to_watch"
+                app:layout_constraintTop_toBottomOf="@id/random_film" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/catalog_card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:elevation="2dp"
-        app:cardCornerRadius="10dp"
-        app:cardPreventCornerOverlap="false"
-        app:cardUseCompatPadding="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_catalog"
-        >
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rec_view_catalog"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="none" />
-    </androidx.cardview.widget.CardView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_view_films_popular"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_pop_films" />
+
+            <TextView
+                android:id="@+id/tv_catalog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/myfont"
+                android:text="Catalog"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/rec_view_films_popular"
+                app:layout_constraintTop_toBottomOf="@id/rec_view_films_popular" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/catalog_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:elevation="2dp"
+                app:cardCornerRadius="10dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_catalog">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec_view_catalog"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none" />
+            </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

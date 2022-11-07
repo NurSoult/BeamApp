@@ -20,4 +20,5 @@
         android:name="com.example.beam.CatalogFragment"
         android:label="fragment_catalog"
         tools:layout="@layout/fragment_catalog" />
+
 </navigation>
