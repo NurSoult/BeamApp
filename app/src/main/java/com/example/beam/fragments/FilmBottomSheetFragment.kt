@@ -1,12 +1,13 @@
-    package com.example.beam
+    package com.example.beam.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.beam.R
 
-private const val FILM_ID = "param1"
+    private const val FILM_ID = "param1"
 
 class FilmBottomSheetFragment : Fragment() {
     private var filmid: String? = null
