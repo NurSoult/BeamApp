@@ -4,25 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.FilmActivity">
+    tools:context=".activities.MealActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="230dp"
-        android:backgroundTint="@color/g_black">
+        android:backgroundTint="@android:color/holo_orange_light">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsing_tool_bar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:contentScrim="@color/g_black"
+            app:contentScrim="@android:color/holo_orange_light"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            app:title="Film Name">
+            app:title="Meal Name">
 
 
             <ImageView
-                android:id="@+id/img_film_detail"
+                android:id="@+id/img_meal_detail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:src="@drawable/ic_favorites"
-        app:backgroundTint="@color/g_black"
+        app:backgroundTint="@android:color/holo_orange_light"
         app:layout_anchor="@id/appbar"
         app:layout_anchorGravity="bottom|end"
         app:tint="@color/white" />
@@ -71,13 +71,14 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/textview_genre"
+                    android:id="@+id/textview_category"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.2"
+                    android:layout_weight="0.3"
+                    android:layout_marginLeft="@dimen/_10sdp"
                     android:drawableLeft="@drawable/ic_catalog"
                     android:drawableTint="@color/g_black"
-                    android:text="Genre: Horror, Thriller"
+                    android:text="Category: Beef"
                     android:textColor="@color/g_black"
                     android:textStyle="bold" />
 
@@ -88,20 +89,20 @@
                     android:layout_weight="1"
                     android:drawableLeft="@drawable/ic_area"
                     android:drawableTint="@color/g_black"
-                    android:text="Country: Afghanistan"
+                    android:text="Area: Afghanistan"
                     android:textColor="@color/g_black"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textview_description"
+                android:id="@+id/textview_instruction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/myfont"
-                android:text="- Description:"
+                android:text="- Instructions :"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 android:textStyle="bold"
@@ -109,26 +110,28 @@
                 app:layout_constraintTop_toBottomOf="@id/linear_layout" />
 
             <TextView
-                android:id="@+id/textview_description_text"
+                android:id="@+id/textview_instruction_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="@dimen/_2sdp"
                 android:text="The Lord of the Rings is the saga of a group of sometimes reluctant heroes who set forth to save their world from consummate evil. Its many worlds and creatures were drawn from Tolkien's extensive knowledge of philology and folklore."
+                android:textAlignment="textEnd"
+                android:paddingRight="@dimen/_9sdp"
                 android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="@+id/textview_description"
-                app:layout_constraintTop_toBottomOf="@id/textview_description" />
+                app:layout_constraintStart_toStartOf="@+id/textview_instruction"
+                app:layout_constraintTop_toBottomOf="@id/textview_instruction" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
 
     <ImageView
-        android:id="@+id/img_play"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:id="@+id/img_youtube"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
         android:layout_gravity="bottom|center"
-        android:src="@drawable/ic_youtube"
-        android:layout_marginBottom="10dp" />
+        android:src="@drawable/youtube_icon_full_color_logo_wine"
+        android:layout_marginBottom="@dimen/_10sdp" />
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
         android:layout_width="match_parent"

@@ -3,9 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/drawable-mdpi/youtube_icon_full_color_logo_wine.xml" value="0.15" />
+        <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/drawable-nodpi/youtube_icon_full_color_logo_wine.xml" value="0.15" />
+        <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/drawable/youtube_icon_full_color_logo_wine.xml" value="0.15" />
         <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/layout/activity_catalog_films.xml" value="0.11145833333333334" />
         <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/layout/activity_film.xml" value="0.264" />
         <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/layout/activity_meal.xml" value="0.264" />
         <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/layout/catalog_item.xml" value="0.536" />
         <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/layout/film_item.xml" value="0.11145833333333334" />
         <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/layout/fragment_catalog.xml" value="0.22826086956521738" />
