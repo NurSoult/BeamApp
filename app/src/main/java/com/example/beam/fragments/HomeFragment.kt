@@ -6,11 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
 import com.example.beam.databinding.FragmentHomeBinding
 import com.example.beam.pojo.Meal
 import com.example.beam.pojo.MealList
 import com.example.beam.retrofit.RetrofitInstance
+import com.example.beam.viewModel.HomeViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,10 +22,11 @@ import retrofit2.Response
 class HomeFragment : Fragment() {
 
     private lateinit var binding:FragmentHomeBinding
+    private lateinit var homeMVVM:HomeViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        homeMVVM = ViewModelProviders.of(this)[HomeViewModel::class.java]
     }
 
     override fun onCreateView(
@@ -37,23 +41,20 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        RetrofitInstance.api.getRandomMeal().enqueue(object : Callback<MealList> {
-            override fun onResponse(call: Call<MealList>, response: Response<MealList>) {
-                if (response.body() != null) {
-                    val randomMeal: Meal = response.body()!!.meals[0]
-                    Glide.with(this@HomeFragment)
-                        .load(randomMeal.strMealThumb)
-                        .into(binding.imgRandomMeal)
-                } else {
-                    return
-                }
+        homeMVVM.getRandomMeal()
+        observerRandomMeal()
+
+    }
+
+    private fun observerRandomMeal() {
+        homeMVVM.observeRandomMealLiveData().observe(viewLifecycleOwner, object : Observer<Meal> {
+            override fun onChanged(t: Meal?) {
+                Glide.with(this@HomeFragment)
+                    .load(t!!.strMealThumb)
+                    .into(binding.imgRandomMeal)
             }
 
-            override fun onFailure(call: Call<MealList>, t: Throwable) {
-                Log.d("HomeFragment", t.message.toString())
-            }
         })
-
     }
 
 
