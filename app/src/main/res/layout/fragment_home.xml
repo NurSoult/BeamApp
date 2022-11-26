@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/myfont"
-                android:text="What would you like to watch?"
+                android:text="War is war, dinner is on schedule."
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -78,7 +78,7 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_would_like_to_watch">
 
                 <ImageView
-                    android:id="@+id/img_random_film"
+                    android:id="@+id/img_random_meal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop" />
@@ -88,9 +88,9 @@
                 android:id="@+id/tv_pop_films"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/myfont"
-                android:text="Popular films"
+                android:text="Over popular dishes:"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
