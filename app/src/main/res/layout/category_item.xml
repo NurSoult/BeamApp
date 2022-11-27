@@ -5,26 +5,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
-        android:id="@+id/img_catalog"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
+        android:id="@+id/img_category"
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="@dimen/_65sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:scaleType="fitCenter"
-        android:src="@color/g_black"
+        android:src="@android:color/holo_orange_light"
         />
     <TextView
-        android:id="@+id/catalog_name"
+        android:id="@+id/textview_category_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/img_catalog"
+        app:layout_constraintTop_toBottomOf="@id/img_category"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="15sp"
-        android:text="Catalog name"
+        android:textSize="@dimen/_15ssp"
+        android:text="Category name"
         android:textColor="@color/black"
         android:fontFamily="@font/myfont"
-        android:layout_marginTop="3dp"/>
+        android:layout_marginTop="@dimen/_3sdp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

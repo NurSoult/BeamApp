@@ -9,19 +9,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.beam.activities.MealActivity
+import com.example.beam.adapters.CategoriesAdapter
 import com.example.beam.adapters.MostPopularAdapter
 import com.example.beam.databinding.FragmentHomeBinding
-import com.example.beam.pojo.CategoryMeals
+import com.example.beam.pojo.MealsByCategory
 import com.example.beam.pojo.Meal
-import com.example.beam.pojo.MealList
-import com.example.beam.retrofit.RetrofitInstance
 import com.example.beam.viewModel.HomeViewModel
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 
 class HomeFragment : Fragment() {
@@ -29,6 +26,7 @@ class HomeFragment : Fragment() {
     private lateinit var homeMVVM:HomeViewModel
     private lateinit var randomMeal:Meal
     private lateinit var popularItemsAdapter: MostPopularAdapter
+    private lateinit var categoriesAdapter: CategoriesAdapter
 
 
     companion object {
@@ -67,7 +65,25 @@ class HomeFragment : Fragment() {
 
         onPopularItemClick()
 
+        prepareCategoriesRecyclerView()
+        homeMVVM.getCategories()
+        observeCategoriesLiveData()
 
+
+    }
+
+    private fun prepareCategoriesRecyclerView() {
+        categoriesAdapter = CategoriesAdapter()
+        binding.recViewCategories.apply {
+            layoutManager = GridLayoutManager(context,3, GridLayoutManager.VERTICAL, false)
+            adapter = categoriesAdapter
+        }
+    }
+
+    private fun observeCategoriesLiveData() {
+        homeMVVM.observerCategoriesLiveData().observe(viewLifecycleOwner, Observer { categories ->
+            categoriesAdapter.setCategoryList(categories)
+        })
     }
 
     private fun onPopularItemClick() {
@@ -90,7 +106,7 @@ class HomeFragment : Fragment() {
     private fun observePopularItemsLiveData() {
         homeMVVM.observePopularItemsLiveData().observe(viewLifecycleOwner
         ) { mealList ->
-            popularItemsAdapter.setMeals(mealsList = mealList as ArrayList<CategoryMeals>)
+            popularItemsAdapter.setMeals(mealsList = mealList as ArrayList<MealsByCategory>)
         }
     }
 
