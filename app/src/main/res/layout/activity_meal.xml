@@ -18,6 +18,7 @@
             android:layout_height="match_parent"
             app:contentScrim="@android:color/holo_orange_light"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+
             app:title="Meal Name">
 
 
@@ -26,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                app:layout_collapseMode="parallax" />
+                app:layout_collapseMode="parallax"/>
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -115,8 +116,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_2sdp"
                 android:text=""
-                android:textAlignment="textEnd"
+                android:textAlignment="textStart"
                 android:paddingRight="@dimen/_9sdp"
+                android:paddingLeft="@dimen/_8sdp"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@+id/textview_instruction"
                 app:layout_constraintTop_toBottomOf="@id/textview_instruction" />

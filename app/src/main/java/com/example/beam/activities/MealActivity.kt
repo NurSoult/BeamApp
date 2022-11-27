@@ -2,10 +2,13 @@ package com.example.beam.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.Typeface
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
+import android.widget.Toolbar
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
@@ -15,6 +18,7 @@ import com.example.beam.databinding.ActivityMealBinding
 import com.example.beam.fragments.HomeFragment
 import com.example.beam.pojo.Meal
 import com.example.beam.viewModel.MealViewModel
+import com.google.android.material.appbar.CollapsingToolbarLayout
 
 class MealActivity : AppCompatActivity() {
     private lateinit var binding:ActivityMealBinding
@@ -102,5 +106,7 @@ class MealActivity : AppCompatActivity() {
         binding.imgYoutube.visibility = View.VISIBLE
 
     }
+
+
 
 }
