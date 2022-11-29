@@ -66,7 +66,7 @@ class MealActivity : AppCompatActivity() {
                 binding.textviewCountry.text = "Area: ${meal!!.strArea}"
                 binding.textviewInstructionText.text = meal.strInstructions
 
-                youtubeLink = meal.strYoutube
+                youtubeLink = meal.strYoutube.toString()
             }
         })
     }
