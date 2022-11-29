@@ -31,7 +31,7 @@
             app:layout_constraintEnd_toEndOf="@id/img_meal"
             app:layout_constraintTop_toBottomOf="@id/img_meal"
             android:layout_margin="@dimen/_5sdp"
-            android:text="meal"/>
+            android:text="test"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
