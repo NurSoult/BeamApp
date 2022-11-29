@@ -1,5 +1,5 @@
 # BeamApp
-Movie App - *Beam*. 
+Android Food App - *Beam*. 
 
 CSS 216 Android Programming | **FINAL PROJECT**
  
