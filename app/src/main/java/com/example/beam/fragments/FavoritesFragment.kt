@@ -1,7 +1,6 @@
 package com.example.beam.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,9 +36,7 @@ class FavoritesFragment : Fragment() {
 
     private fun observeFavorites() {
         viewModel.observeFavoritesMealsLiveData().observe(viewLifecycleOwner, Observer{ meals->
-            meals.forEach{
-                Log.d("test",it.idMeal)
-            }
+
         })
     }
 }
