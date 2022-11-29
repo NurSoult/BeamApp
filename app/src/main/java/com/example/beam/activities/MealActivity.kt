@@ -8,16 +8,20 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import android.widget.Toolbar
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
 import com.example.beam.R
 import com.example.beam.databinding.ActivityMainBinding
 import com.example.beam.databinding.ActivityMealBinding
+import com.example.beam.db.MealDatabase
 import com.example.beam.fragments.HomeFragment
 import com.example.beam.pojo.Meal
 import com.example.beam.viewModel.MealViewModel
+import com.example.beam.viewModel.MealViewModelFactory
 import com.google.android.material.appbar.CollapsingToolbarLayout
 
 class MealActivity : AppCompatActivity() {
@@ -35,7 +39,9 @@ class MealActivity : AppCompatActivity() {
         binding = ActivityMealBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        mealMVVM = ViewModelProviders.of(this)[MealViewModel::class.java]
+        val mealDatabase = MealDatabase.getInstance(this)
+        val viewModelFactory = MealViewModelFactory(mealDatabase)
+        mealMVVM = ViewModelProvider(this,viewModelFactory)[MealViewModel::class.java]
 
         getMealInfoFromIntent()
 
@@ -47,6 +53,16 @@ class MealActivity : AppCompatActivity() {
         observerMealDetailsLiveData()
 
         onYoutubeImageClick()
+        onFavoriteClick()
+    }
+
+    private fun onFavoriteClick() {
+        binding.btnAddToFav.setOnClickListener {
+            mealToSave?.let {
+                mealMVVM.insertMeal(it)
+                Toast.makeText(this,"Meal saved!",Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun onYoutubeImageClick() {
@@ -56,11 +72,13 @@ class MealActivity : AppCompatActivity() {
         }
     }
 
+    private var mealToSave:Meal?=null
     private fun observerMealDetailsLiveData() {
         mealMVVM.observerMealDetailsLiveData().observe(this, object : Observer<Meal> {
             override fun onChanged(t: Meal?) {
                 onResponseCase()
                 val meal = t
+                mealToSave = meal
 
                 binding.textviewCategory.text = "Category: ${meal!!.strCategory}"
                 binding.textviewCountry.text = "Area: ${meal!!.strArea}"
