@@ -14,3 +14,4 @@ object RetrofitInstance {
     }
 
 }
+//moshi suspend
