@@ -16,6 +16,7 @@ import com.example.beam.activities.MealActivity
 import com.example.beam.adapters.CategoriesAdapter
 import com.example.beam.adapters.MostPopularAdapter
 import com.example.beam.databinding.FragmentHomeBinding
+import com.example.beam.fragments.bottomsheet.MealBottomSheetFragment
 import com.example.beam.pojo.MealsByCategory
 import com.example.beam.pojo.Meal
 import com.example.beam.viewModel.HomeViewModel
@@ -71,6 +72,15 @@ class HomeFragment : Fragment() {
 
         onCategoryClick()
 
+        onPopularItemLongClick()
+
+    }
+
+    private fun onPopularItemLongClick() {
+        popularItemsAdapter.onLongItemClick = { meal ->
+            val mealBottomSheetFragment = MealBottomSheetFragment.newInstance(meal.idMeal)
+            mealBottomSheetFragment.show(childFragmentManager, "Meal Info")
+        }
     }
 
     private fun onCategoryClick() {

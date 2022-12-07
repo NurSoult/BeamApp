@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.FilmBottomSheetFragment">
+    tools:context=".fragments.bottomsheet.MealBottomSheetFragment"
+    android:id="@+id/bottom_sheet">
 
     <ImageView
         android:id="@+id/img_bottom_sheet"
@@ -16,7 +17,7 @@
         android:layout_margin="5dp"
         android:src="@color/g_black"
         android:scaleType="centerCrop"/>
-
+    
     <LinearLayout
         android:id="@+id/linear_bottom_sheet"
         android:layout_width="0dp"
@@ -31,7 +32,7 @@
             android:id="@+id/tv_bottom_sheet_area"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kazakhstan"
+            android:text="Germany"
             android:textColor="@color/g_black"
             android:fontFamily="@font/myfont"
             android:drawableStart="@drawable/ic_area"
@@ -42,7 +43,7 @@
             android:id="@+id/tv_bottom_sheet_catalog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Horror"
+            android:text="Chicken"
             android:textColor="@color/g_black"
             android:fontFamily="@font/myfont"
             android:drawableStart="@drawable/ic_catalog"
@@ -52,27 +53,24 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/tv_bottom_sheet_film_name"
+        android:id="@+id/tv_bottom_sheet_meal_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Film name"
+        android:text="Meal Name"
         app:layout_constraintStart_toStartOf="@id/linear_bottom_sheet"
         app:layout_constraintTop_toBottomOf="@id/linear_bottom_sheet"
-        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/g_black"
         android:fontFamily="@font/myfont"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:fontFamily="@font/myfont"
-        android:text="Read More ..."
+        android:text="Read more..."
+        app:layout_constraintStart_toStartOf="@id/tv_bottom_sheet_meal_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_bottom_sheet_meal_name"
+        android:layout_marginTop="10dp"
         android:textColor="@color/g_black"
-        app:layout_constraintStart_toStartOf="@id/tv_bottom_sheet_film_name"
-        app:layout_constraintTop_toBottomOf="@id/tv_bottom_sheet_film_name" />
-
+        android:fontFamily="@font/myfont"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
