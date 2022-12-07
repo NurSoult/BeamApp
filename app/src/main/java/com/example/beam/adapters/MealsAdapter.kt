@@ -2,16 +2,14 @@ package com.example.beam.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.AsyncDifferConfig
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
 import com.example.beam.databinding.MealItemBinding
 import com.example.beam.pojo.Meal
 
-class FavoritesMealsAdapter : RecyclerView.Adapter<FavoritesMealsAdapter.FavoritesMealsAdapterViewHolder>() {
+class MealsAdapter : RecyclerView.Adapter<MealsAdapter.FavoritesMealsAdapterViewHolder>() {
 
     inner class FavoritesMealsAdapterViewHolder(val binding:MealItemBinding) : RecyclerView.ViewHolder(binding.root)
 

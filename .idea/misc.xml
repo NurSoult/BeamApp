@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/drawable-mdpi/youtube_icon_full_color_logo_wine.xml" value="0.15" />
         <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/drawable-nodpi/youtube_icon_full_color_logo_wine.xml" value="0.15" />
+        <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/drawable/search_box_background.xml" value="0.15" />
         <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/drawable/youtube_icon_full_color_logo_wine.xml" value="0.15" />
         <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/layout/activity_catalog_films.xml" value="0.11145833333333334" />
         <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/layout/activity_category_meals.xml" value="0.264" />
@@ -20,6 +21,7 @@
         <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/layout/fragment_film_bottom_sheet.xml" value="0.4" />
         <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/layout/fragment_genres.xml" value="0.264" />
         <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/layout/fragment_search.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/layout/popular_films.xml" value="0.536" />
         <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/layout/popular_items.xml" value="0.264" />
         <entry key="..\:/Users/Nurgali/AndroidStudioProjects/Beam/app/src/main/res/menu/bottom_menu.xml" value="0.2515625" />
