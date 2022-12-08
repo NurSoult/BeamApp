@@ -23,11 +23,12 @@ class HomeViewModel(
     private var bottomSheetMealLiveData = MutableLiveData<Meal>()
     private val searchedMealsLiveData = MutableLiveData<List<Meal>>()
 
-    private var saveStateRandomMeal: Meal ?= null
+
+    private var saveSateRandomMeal: Meal ?= null
 
 
     fun getRandomMeal() {
-        saveStateRandomMeal?.let { randomMeal ->
+        saveSateRandomMeal?.let { randomMeal ->
             randomMealLiveData.postValue(randomMeal)
             return
         }
@@ -37,7 +38,7 @@ class HomeViewModel(
                 if (response.body() != null) {
                     val randomMeal: Meal = response.body()!!.meals[0]
                     randomMealLiveData.value = randomMeal
-                    saveStateRandomMeal = randomMeal
+                    saveSateRandomMeal = randomMeal
                 } else {
                     return
                 }
